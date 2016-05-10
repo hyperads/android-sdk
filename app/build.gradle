@@ -35,6 +35,6 @@ dependencies {
     compile 'com.android.support:support-v4:23.3.0'
     compile 'com.google.android.gms:play-services-ads:8.4.0'
     compile 'com.google.android.gms:play-services-base:8.4.0'
-    compile(name: 'DispplyAdSDK-1.0.2', ext: 'aar')
+    compile(name: 'DispplyAdSDK-1.1.0', ext: 'aar')
 
 }
