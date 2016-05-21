@@ -1,4 +1,4 @@
-package sample.dispplyadsample;
+package hyperadx.sample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

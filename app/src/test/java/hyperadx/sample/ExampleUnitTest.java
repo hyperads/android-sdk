@@ -1,4 +1,4 @@
-package sample.dispplyadsample;
+package hyperadx.sample;
 
 import org.junit.Test;
 
