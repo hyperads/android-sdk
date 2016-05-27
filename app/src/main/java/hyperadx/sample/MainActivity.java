@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void showNativeAd() {
 
-        adFrame = (FrameLayout) findViewById(dispply.com.hadsample.R.id.adContent);
+        adFrame = (FrameLayout) findViewById(R.id.adContent);
 
         nativeAd = new HADNativeAd(this,
-                getString(dispply.com.hadsample.R.string.adPlacement)
+                getString(R.string.adPlacement)
         ); //Native AD constructor
 
         nativeAd.setContent("title,icon,main,description"); // Set content to load
@@ -58,14 +58,14 @@ public class MainActivity extends AppCompatActivity {
             public void onAdLoaded(Ad ad) { // Called when AD is Loaded
                 Toast.makeText(MainActivity.this, "Native ad loaded", Toast.LENGTH_SHORT).show();
 
-                AdView = nativeAd.getNativeAdView(ad, dispply.com.hadsample.R.layout.native_ad_layout); // Registering view for AD
+                AdView = nativeAd.getNativeAdView(ad, R.layout.native_ad_layout); // Registering view for AD
                 adFrame.addView(AdView); //Adding view to frame
 
                 // Create native UI using the ad metadata.
-                TextView tvTitle = (TextView) AdView.findViewById(dispply.com.hadsample.R.id.tvTitle);
-                TextView tvDescription = (TextView) AdView.findViewById(dispply.com.hadsample.R.id.tvDescription);
-                ImageView ivIcon = (ImageView) AdView.findViewById(dispply.com.hadsample.R.id.ivIcon);
-                ImageView ivImage = (ImageView) AdView.findViewById(dispply.com.hadsample.R.id.ivImage);
+                TextView tvTitle = (TextView) AdView.findViewById(R.id.tvTitle);
+                TextView tvDescription = (TextView) AdView.findViewById(R.id.tvDescription);
+                ImageView ivIcon = (ImageView) AdView.findViewById(R.id.ivIcon);
+                ImageView ivImage = (ImageView) AdView.findViewById(R.id.ivImage);
 
                 // Setting the Text.
                 tvTitle.setText(ad.getTitle());
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     //--------INTERSTITIAL AD-------------//
 
     private void loadInterstitialAd() {
-        interstitialAd = new HADInterstitialAd(this, getString(dispply.com.hadsample.R.string.adPlacement)); //Interstitial AD constructor
+        interstitialAd = new HADInterstitialAd(this, getString(R.string.adPlacement)); //Interstitial AD constructor
         interstitialAd.setAdListener(new InterstitialAdListener() { // Set Listener
             @Override
             public void onAdLoaded(com.hyperadx.lib.sdk.interstitialads.Ad ad) { // Called when AD is Loaded
