@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         adFrame = (FrameLayout) findViewById(R.id.adContent);
 
         nativeAd = new HADNativeAd(this,
-                getString(R.string.adPlacement)
+                getString(R.string.Placement)
         ); //Native AD constructor
 
         nativeAd.setContent("title,icon,main,description"); // Set content to load
@@ -98,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
     //--------INTERSTITIAL AD-------------//
 
     private void loadInterstitialAd() {
-        interstitialAd = new HADInterstitialAd(this, getString(R.string.adPlacement)); //Interstitial AD constructor
+        interstitialAd = new HADInterstitialAd(this /*Strongly recomend to use Activity context*/,
+                getString(R.string.Placement)); //Interstitial AD constructor.
+
         interstitialAd.setAdListener(new InterstitialAdListener() { // Set Listener
             @Override
             public void onAdLoaded(com.hyperadx.lib.sdk.interstitialads.Ad ad) { // Called when AD is Loaded
