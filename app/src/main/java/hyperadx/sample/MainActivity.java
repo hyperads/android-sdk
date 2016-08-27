@@ -1,5 +1,6 @@
 package hyperadx.sample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.hyperadx.lib.sdk.Event;
 import com.hyperadx.lib.sdk.HADEvent;
@@ -177,4 +179,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void showNativeInList(View view) {
+        Intent intent = new Intent(this, ListActivity.class);
+        startActivity(intent);
+    }
 }
