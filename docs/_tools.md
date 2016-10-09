@@ -1,4 +1,4 @@
-## Sending events for user segmentation [alpha]
+## User segmentation [alpha]
 
 Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests and spending habits. You can build custom (or use predefined) segments from your users. This is potentially increase your monetization. 
 
