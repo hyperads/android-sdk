@@ -1,22 +1,21 @@
-
-## Native Ads in Android
+## Native Ads
 
 The Native Ad API allows you to build a customized experience for the ads you show in your app. When using the Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of ad properties such as a title, an image, a call to action, and you will have to use them to construct a custom view where the ad is shown.
 
-Sample projects:
+Sample project:
 
 * [Download](https://github.com/hyperads/android-sdk/releases) latest release and extract the Example app for Android.
 
 ### Set up the SDK
 
->  Add following under manifest tag to your AndroidManifest.xml:
+Add following under manifest tag to your AndroidManifest.xml:
 
 ```xml
  <uses-permission android:name="android.permission.INTERNET"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
->  Put the HyperAdxSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+Put the HyperAdxSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
 
 ```groove
 dependencies {
@@ -28,7 +27,7 @@ dependencies {
 }
 ```
 
->  Then, create a function that requests a native ad:
+Then, create a function that requests a native ad:
 
 ```java
 private void showNativeAd() {
@@ -53,7 +52,8 @@ private void showNativeAd() {
     nativeAd.loadAd(); // Call to load AD
 }
 ```
->  The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in code. The custom layout .xml. For example:
+
+The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in code. The custom layout .xml. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ private void showNativeAd() {
 </RelativeLayout>
 ```
 
-> Now you can use this  layout .xml as a frame. For example:
+Now you can use this  layout .xml as a frame. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,7 +117,7 @@ private void showNativeAd() {
 </RelativeLayout>
 ```
 
->  Modify the onAdLoaded function above to retrieve the ad properties. The SDK will log the impression and handle the click automatically.
+Modify the `onAdLoaded` function above to retrieve the ad properties. The SDK will log the impression and handle the click automatically.
 
 ```java
 private NativeAd nativeAd;
@@ -144,8 +144,10 @@ public void onAdLoaded(Ad ad) { // Called when AD is Loaded
 
 }
 ```
-> If you want to use Native AD in RecyclerView you should use registerViewForInteraction(Ad ad, View adView) method instead of getNativeAdView(Ad ad, int ResID)
-Sample: 
+
+If you want to use Native AD in `RecyclerView` you should use `registerViewForInteraction(Ad ad, View adView)` method instead of `getNativeAdView(Ad ad, int ResID)`
+
+For example:
 
 ```java
 
