@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.hyperadx.lib.sdk.nativeads.Ad;
 import com.hyperadx.lib.sdk.nativeads.AdListener;
 import com.hyperadx.lib.sdk.nativeads.HADNativeAd;
@@ -61,6 +62,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
 
             final HADNativeAd nativeAd = new HADNativeAd(activity,
                     activity.getString(R.string.Placement)
+
             ); //Native AD constructor
 
             nativeAd.setContent("title,icon,description"); // Set content to load
@@ -78,8 +80,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
                     //  Setting the Text.
                     holder.title.setText(ad.getTitle());
                     holder.genre.setText(ad.getDescription());
-                    //  Downloading and setting the ad icon.
-                    HADNativeAd.downloadAndDisplayImage(holder.ivIcon, ad.getIcon_url());
+                    //  Setting the ad icon.
+                    holder.ivIcon.setImageBitmap(ad.getIcon());
 
                 }
 
