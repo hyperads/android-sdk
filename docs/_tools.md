@@ -1,6 +1,5 @@
-# Tools
-
 ## Events
+
 You can send the events very easy. Just call the method sendEvent(Context, event_code) from HADEvent class.
 Example:
 ```java
