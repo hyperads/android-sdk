@@ -1,6 +1,6 @@
 # Interstitial ads
 
-The HyperAdX Interstitial ads allows you to monetize your Android apps with banner ads. This guide explains how to add banner ads to your app. If you’re interested in other kinds of ad units, see the list of available types.
+The HyperAdX Interstitial ads allows you to monetize your Android apps. This guide explains how to add interstitial ads to your app. If you’re interested in other kinds of ad units, see the [list of available types](https://github.com/hyperads/android-sdk) .
 
 Sample projects:
 
