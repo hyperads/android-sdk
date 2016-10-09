@@ -9,7 +9,7 @@ These are code samples of different ad formats available on [HyperADx's](http://
 
 * [Interstitial](https://github.com/hyperads/android-sdk/blob/master/docs/_interstitial.md)
 * [Native](https://github.com/hyperads/android-sdk/blob/master/docs/_native.md)
-* [Events](https://github.com/hyperads/android-sdk/blob/master/docs/_tools.md)
+* [User segmentation](https://github.com/hyperads/android-sdk/blob/master/docs/_tools.md)
 
 ### Adapters for integration with Networks
 
