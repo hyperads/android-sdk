@@ -8,9 +8,9 @@ These are sample code and app demonstrate the usage of [HyperADx](http://hyperad
 
 ##Android
 ###Samples
-* [Interstitial](https://github.com/hyperads/android-sdk/docs/_interstitial.md)
-* [Native](https://github.com/hyperads/android-sdk/docs/_native.md)
-* [Tools](https://github.com/hyperads/android-sdk/docs/_tools.md)
+* [Interstitial](https://github.com/hyperads/android-sdk/blob/master/docs/_interstitial.md)
+* [Native](https://github.com/hyperads/android-sdk/docs/blob/master/_native.md)
+* [Tools](https://github.com/hyperads/android-sdk/docs/blob/master/_tools.md)
 
 ###Adapters
 * [MoPub](https://github.com/hyperads/android-MoPub-adapter)
