@@ -8,9 +8,10 @@ These are sample code and app demonstrate the usage of HyperADx Android SDK.
 
 ##Android
 ###Samples
-* [Interstitial](docs/_interstitial)
-* [Native](docs/_native)
-* [Tools](docs/_tools)
+* [Interstitial](https://github.com/hyperads/android-sdk/docs/_interstitial)
+* [Native](https://github.com/hyperads/android-sdk/docs/_native)
+* [Tools](https://github.com/hyperads/android-sdk/docs/_tools)
+
 ###Adapters
-* [MOPUB](https://github.com/hyperads/android-MoPub-adapter)
+* [MoPub](https://github.com/hyperads/android-MoPub-adapter)
 * [AdMob](https://github.com/hyperads/android-AdMob-adapter)
