@@ -80,8 +80,8 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
                     //  Setting the Text.
                     holder.title.setText(ad.getTitle());
                     holder.genre.setText(ad.getDescription());
-                    //  Setting the ad icon.
-                    holder.ivIcon.setImageBitmap(ad.getIcon());
+                    // Downloading and setting the ad icon.
+                    HADNativeAd.downloadAndDisplayImage(holder.ivIcon, ad.getIcon_url());
 
                 }
 

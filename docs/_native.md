@@ -137,10 +137,10 @@ public void onAdLoaded(Ad ad) { // Called when AD is Loaded
     // Setting the Text.
     tvTitle.setText(ad.getTitle());
     tvDescription.setText(ad.getDescription());
-     // Setting the ad icon.
-     ivIcon.setImageBitmap(ad.getIcon());
-     // Setting the cover image.
-     ivImage.setImageBitmap(ad.getImage());
+    // Downloading and setting the ad icon.
+    HADNativeAd.downloadAndDisplayImage(ivIcon, ad.getIcon_url());
+    // Download and setting the cover image.
+    HADNativeAd.downloadAndDisplayImage(ivImage, ad.getImage_url());
 
 }
 ```
@@ -175,8 +175,8 @@ For example:
                     //  Setting the Text.
                     holder.title.setText(ad.getTitle());
                     holder.genre.setText(ad.getDescription());
-                    //  Setting the ad icon.
-                    holder.ivIcon.setImageBitmap(ad.getIcon());
+                    // Downloading and setting the ad icon.
+                    HADNativeAd.downloadAndDisplayImage(holder.ivIcon, ad.getIcon_url());
 
                 }
 
