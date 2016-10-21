@@ -1,6 +1,6 @@
 # Interstitial ads
 
-The HyperAdX Interstitial ads allows you to monetize your Android apps. This guide explains how to add interstitial ads to your app. If you’re interested in other kinds of ad units, see the [list of available types](https://github.com/hyperads/android-sdk) .
+The HyperADX Interstitial ads allows you to monetize your Android apps. This guide explains how to add interstitial ads to your app. If you’re interested in other kinds of ad units, see the [list of available types](https://github.com/hyperads/android-sdk) .
 
 Sample project:
 
@@ -15,7 +15,7 @@ Add following under manifest tag to your AndroidManifest.xml:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Put the HyperAdxSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
 
 ```groove
 dependencies {
