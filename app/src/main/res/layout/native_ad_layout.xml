@@ -1,38 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="?android:attr/colorBackground">
 
     <ImageView
         android:id="@+id/ivIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/ivIcon"
-        android:paddingLeft="10dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:typeface="monospace" />
-
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="480dp"
-        android:layout_height="168dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ivIcon" />
+        android:layout_margin="5dp" />
 
     <TextView
         android:id="@+id/tvDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ivImage" />
+        android:layout_below="@+id/ivImage"
+        android:layout_toLeftOf="@+id/btCTA"
+        android:layout_toStartOf="@+id/btCTA"
+        android:gravity="left"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btCTA"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:layout_toEndOf="@+id/ivIcon"
+        android:gravity="left" />
+
+    <Button
+        android:text="Install now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btCTA"
+        android:background="#8BC615"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_below="@+id/ivImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp" />
+
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ivIcon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        android:layout_height="150dp"
+        android:layout_margin="5dp" />
 
 </RelativeLayout>

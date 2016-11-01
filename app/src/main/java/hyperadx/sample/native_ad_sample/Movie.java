@@ -1,4 +1,4 @@
-package hyperadx.sample;
+package hyperadx.sample.native_ad_sample;
 
 public class Movie {
     private String title, genre, year;

@@ -1,4 +1,4 @@
-package hyperadx.sample;
+package hyperadx.sample.native_ad_sample;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +15,8 @@ import com.hyperadx.lib.sdk.nativeads.AdListener;
 import com.hyperadx.lib.sdk.nativeads.HADNativeAd;
 
 import java.util.List;
+
+import hyperadx.sample.R;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHolder> {
 

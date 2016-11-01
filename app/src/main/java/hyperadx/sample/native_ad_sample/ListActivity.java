@@ -1,4 +1,4 @@
-package hyperadx.sample;
+package hyperadx.sample.native_ad_sample;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import hyperadx.sample.R;
 
 public class ListActivity extends AppCompatActivity {
 
