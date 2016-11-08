@@ -1,5 +1,6 @@
 # Interstitial ads
 
+Here is the sample how to monetize your Android apps with the interstitial ads. See [Supported Ad types](https://github.com/hyperads/android-sdk#supportes-ad-types) for infomation about other supported ad formats.
 
 ### Set up the SDK
 

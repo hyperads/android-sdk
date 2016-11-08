@@ -1,5 +1,6 @@
 # Banner ads
 
+Here is the sample how to monetize your Android apps with the banner ads. See [Supported Ad types](https://github.com/hyperads/android-sdk#supported-ad-types) for infomation about other supported ad formats.
 
 ### Set up the SDK
 
