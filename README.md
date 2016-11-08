@@ -16,9 +16,9 @@ Sample project:
 
 * [Download](https://github.com/hyperads/android-sdk/releases) latest release and extract the Example app for Android.
 
-### Samples
+### Supported Ad types
 
-These are code samples of different ad formats available on [HyperADX's](http://hyperadx.com/) Android SDK.
+These are code samples of the different ad formats available with [HyperADX's](http://hyperadx.com/) Android SDK.
 
 * [Native](https://github.com/hyperads/android-sdk/blob/master/docs/_native.md)
 * [Interstitial](https://github.com/hyperads/android-sdk/blob/master/docs/_interstitial.md)

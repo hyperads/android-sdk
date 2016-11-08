@@ -1,12 +1,14 @@
 ## Native Ads
 
-The Native Ad API allows you to build a customized experience for the ads you show in your app. When using the Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of ad properties such as a title, an image, a call to action, and you will have to use them to construct a custom view where the ad is shown.
+The HyperADX's Native Ads allows you to build a customized experience for the ads displayed in your app. When using the Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of ad properties such as a title, an image, a call to action. These properties are used to construct a custom UIView, which displays the ad.
+
+### Set up the SDK
 
 Sample project:
 
-* [Download](https://github.com/hyperads/android-sdk/releases) latest release and extract the Example app for Android.
+* [Download](https://github.com/hyperads/android-sdk/releases) the latest release and extract the Example app for Android.
 
-### Set up the SDK
+1. Then please take the steps below:
 
 Add following under manifest tag to your AndroidManifest.xml:
 
@@ -15,7 +17,7 @@ Add following under manifest tag to your AndroidManifest.xml:
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+2. Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
 
 ```groove
 dependencies {
@@ -27,7 +29,7 @@ dependencies {
 }
 ```
 
-Then, create a function that requests a native ad:
+3. Then, create a function that requests a native ad:
 
 ```java
 private void showNativeAd() {
@@ -53,7 +55,7 @@ private void showNativeAd() {
 }
 ```
 
-The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in code. The custom layout .xml. For example:
+4. The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in code. The custom layout .xml. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +93,7 @@ The next step is to extract the ad metadata and use its properties to build your
 </RelativeLayout>
 ```
 
-Now you can use this  layout .xml as a frame. For example:
+5. Now you can use this  layout .xml as a frame. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
