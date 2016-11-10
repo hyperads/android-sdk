@@ -17,7 +17,7 @@ Then please take the steps below:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-2. Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+2.  Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
 
 ```groove
 dependencies {
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-3. Then, create a function that requests a banner ad. The SDK will log the impression and handle the click automatically.
+3.  Then, create a function that requests a banner ad. The SDK will log the impression and handle the click automatically.
 
 ```java
     private void showBannerAd() {
