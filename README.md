@@ -14,7 +14,7 @@ To get up and running with **HyperADX**, you'll need to [Create an Account](http
 
 Sample project:
 
-* [Download](https://github.com/hyperads/android-sdk/releases) latest release and extract the Example app for Android.
+* [Download](https://github.com/hyperads/android-sdk/releases) the latest release and extract the Example app for Android.
 
 ### Supported Ad types
 
@@ -26,6 +26,10 @@ These are code samples of the different ad formats available with [HyperADX's](h
 * [User segmentation](https://github.com/hyperads/android-sdk/blob/master/docs/_tools.md)
 
 ###  Adapters for integration with popular Networks
+
+HyperADX provides MoPub and AdMob adapters for Android applications. Publishers using MoPub and AdMob to mediate ad networks for their Android apps can now take advantage of serving Hypeadx's native (MoPub only) and interstitial ads through MoPub's and AdMob's mediation solutions.
+
+The sections below will let you know how to add the network adapter.
 
 * [MoPub](https://github.com/hyperads/android-MoPub-adapter)
 * [AdMob](https://github.com/hyperads/android-AdMob-adapter)
