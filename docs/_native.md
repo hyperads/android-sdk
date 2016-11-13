@@ -8,16 +8,16 @@ Sample project:
 
 * [Download](https://github.com/hyperads/android-sdk/releases) the latest release and extract the Example app for Android.
 
-1. Then please take the steps below:
+Then please take the steps below:
 
-Add following under manifest tag to your AndroidManifest.xml:
+* Add the following under the manifest tag to your AndroidManifest.xml:
 
 ```xml
  <uses-permission android:name="android.permission.INTERNET"/>
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-2. Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+* Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. You will also need to add Google Play services.
 
 ```groove
 dependencies {
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-3. Then, create a function that requests a native ad:
+* Then, create a function that requests a native ad:
 
 ```java
 private void showNativeAd() {
@@ -55,7 +55,7 @@ private void showNativeAd() {
 }
 ```
 
-4. The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in code. The custom layout .xml. For example:
+* The next step is to extract the ad metadata and use its properties to build your customized native UI. You can either create your custom view in a layout .xml, or you can add elements in the code. Example of a custom layout .xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,7 +93,7 @@ private void showNativeAd() {
 </RelativeLayout>
 ```
 
-5. Now you can use this  layout .xml as a frame. For example:
+* Now you can use this  layout .xml as a frame. For example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
