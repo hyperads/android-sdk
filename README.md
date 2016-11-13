@@ -6,11 +6,11 @@
 
 Hyper is a leading monetization and advertising platform, which enables its partners and clients to use all the power of native advertising.
 
-## Getting Started
+### Getting Started
 
 To get up and running with **HyperADX**, you'll need to [Create an Account](http://hyperadx.com/publishers/sign_in), [Add an Application to the Dashboard](http://hyperadx.com/publishers/traffic_sources) and create one or more Placements for your added application.
 
-## Set up the SDK
+### Set up the SDK
 
 Sample project:
 
@@ -23,7 +23,18 @@ These are code samples of the different ad formats available with [HyperADX's](h
 * [Native](https://github.com/hyperads/android-sdk/blob/master/docs/_native.md)
 * [Interstitial](https://github.com/hyperads/android-sdk/blob/master/docs/_interstitial.md)
 * [Banner](https://github.com/hyperads/android-sdk/blob/master/docs/_banner.md)
-* [User segmentation](https://github.com/hyperads/android-sdk/blob/master/docs/_tools.md)
+
+### User segmentation events
+
+Ad users are different in their behaviors, needs and expectations. Applying user segmentation delivers the best-fitting ad experience to your users.  
+Custom ad targeting results in increazing your monetization values and obtaining maximum value from every user. HyperADX provides user segmentation feature
+by processing in-app events triggered by the users. Based on the user segmentation events HyperADX automatically builds audiences and assigns high 
+performing campaigns individually to each segment. Besides our advertisers and media buying department encourage the most engaged users by making higher
+bids for them. 
+
+The section below describe how to configure sending the events in your application. 
+
+* [Examples & event types](https://github.com/hyperads/android-sdk/blob/master/docs/_tools.md)
 
 ###  Adapters for integration with popular Networks
 
