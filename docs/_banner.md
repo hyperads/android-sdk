@@ -1,6 +1,6 @@
 # Banner ads
 
-Here is the sample how to monetize your Android apps with the banner ads. See [Supported Ad types](https://github.com/hyperads/android-sdk#supported-ad-types) for infomation about other supported ad formats.
+This document describes how to monetize your Android apps with the banner ads. Please see [Supported Ad types](https://github.com/hyperads/android-sdk#supported-ad-types) for infomation about other supported ad formats.
 
 ### Set up the SDK
 
@@ -10,14 +10,14 @@ Sample project:
 
 Then please take the steps below:
 
-1. Add following under manifest tag to your AndroidManifest.xml:
+* Add the following under manifest tag to your AndroidManifest.xml:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-2.  Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
+* Put the HyperADXSDK_xxx.jar in “libs” folder in your Android Studio or Eclipse. Add it to dependencies in build.grandle file. Also you need to add google play services.
 
 ```groove
 dependencies {
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-3.  Then, create a function that requests a banner ad. The SDK will log the impression and handle the click automatically.
+* Then, create a function that requests a banner ad. The SDK will log the impression and handle the click automatically.
 
 ```java
     private void showBannerAd() {
