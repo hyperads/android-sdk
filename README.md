@@ -1,6 +1,6 @@
 #HyperADX Android SDK
 
-![HyperADx Logo](http://d2n7xvwjxl8766.cloudfront.net/assets/site/logo-e04518160888e1f8b3795f0ce01e1909.png)
+[![HyperADx Logo](http://d2n7xvwjxl8766.cloudfront.net/assets/site/logo-e04518160888e1f8b3795f0ce01e1909.png)](http://hyperadx.com)
 
 ## HyperADX Android SDK
 
@@ -18,7 +18,7 @@ Sample project:
 
 ### Supported Ad types
 
-These are code samples of the different ad formats available with [HyperADX's](http://hyperadx.com/) Android SDK.
+These are code samples of the different ad formats available with [HyperADX's] Android SDK.
 
 * [Native](https://github.com/hyperads/android-sdk/blob/master/docs/_native.md)
 * [Interstitial](https://github.com/hyperads/android-sdk/blob/master/docs/_interstitial.md)
