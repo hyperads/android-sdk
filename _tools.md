@@ -12,7 +12,7 @@ If your app already knows a user's interests, it can provide that information in
 
 ```java
 AdRequest request = new AdRequest.Builder()
-        .setGender(AdRequest.GENDER_FEMALE)
+        .addKeyword("sport")
         .build();
 ```
 
@@ -22,7 +22,7 @@ If your app already knows a user's gender, it can provide that information in th
 
 ```java
 AdRequest request = new AdRequest.Builder()
-        .addKeyword("sport")
+        .setGender(AdRequest.GENDER_FEMALE)
         .build();
 ```
 
