@@ -20,7 +20,7 @@ Sample project:
 
 These are code samples of the different ad formats available with [HyperADX's] Android SDK.
 
-* [Native](_native.md)
+* [Native & Native video](_native.md)
 * [Interstitial](_interstitial.md)
 
 ### Targeting
