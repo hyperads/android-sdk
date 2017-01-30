@@ -78,7 +78,6 @@ dependencies {
         nativeAd.setContent(
                 HadContent.TITLE,
                 HadContent.ICON,
-                HadContent.VIDEO,
                 HadContent.MAIN);
 
         // Allow Video-Native ad type
