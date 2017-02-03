@@ -26,6 +26,11 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
 
     private String statusLabel = "";
 
+    public static InterstitialFragment newInstance() {
+        InterstitialFragment fragment = new InterstitialFragment();
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

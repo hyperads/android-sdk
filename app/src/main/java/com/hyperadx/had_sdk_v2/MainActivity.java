@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.hyperadx.had_sdk_v2.banner_ad_sample.BannerAdFragment;
 import com.hyperadx.had_sdk_v2.interstitial_ad_sample.InterstitialFragment;
 import com.hyperadx.had_sdk_v2.native_ad_sample.NativeAdFragment;
 
@@ -50,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return NativeAdFragment.newInstance();
                 case 1:
-                    return new InterstitialFragment();
+                    return InterstitialFragment.newInstance();
+                case 2:
+                    return BannerAdFragment.newInstance();
             }
 
             return NativeAdFragment.newInstance();
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
@@ -69,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Native";
                 case 1:
                     return "Interstitial";
+                case 2:
+                    return "Banner";
             }
             return null;
         }
