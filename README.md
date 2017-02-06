@@ -22,6 +22,7 @@ These are code samples of the different ad formats available with [HyperADX's] A
 
 * [Native & Native video](_native.md)
 * [Interstitial](_interstitial.md)
+* [Banner](_banner.md)
 
 ### Targeting
 
