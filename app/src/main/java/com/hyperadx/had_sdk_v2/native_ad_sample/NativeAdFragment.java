@@ -90,7 +90,7 @@ public class NativeAdFragment extends Fragment {
     private void loadNativeAd() {
 
         //Native AD constructor.
-        nativeAd = new NativeAd(getActivity(), "YOUR_PLACEMENT_ID"); /*Strongly recommend to use Activity context*/
+        nativeAd = new NativeAd(getActivity(), getString(R.string.nativeAdPlacement)); /*Strongly recommend to use Activity context*/
 
         // Setting content types to request
         nativeAd.setContent(

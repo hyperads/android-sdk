@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">HAD_SDK_v2</string>
     <string name="title">HyperADX</string>
+    <string name="nativeAdPlacement">W03qNzM6</string>
+    <string name="interstitialAdPlacement">W93593Xw</string>
     <string name="bannerAdPlacement">KoMrp58X</string>
+    <string name="interstitialVideoAdPlacement">kvaXVl3r</string>
 
 </resources>

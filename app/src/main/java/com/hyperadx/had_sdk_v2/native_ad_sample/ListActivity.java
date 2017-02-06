@@ -29,7 +29,7 @@ public class ListActivity extends AppCompatActivity implements NativeAdsManager.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        listNativeAdsManager = new NativeAdsManager(this, "YOUR_PLACEMENT_ID", 5);
+        listNativeAdsManager = new NativeAdsManager(this, getString(R.string.nativeAdPlacement), 5);
         listNativeAdsManager.setListener(this);
 
         listNativeAdsManager.setAdRequest(

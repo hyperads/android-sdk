@@ -82,7 +82,7 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
         setLabel("Loading interstitial ad...");
 
         // Create the interstitial unit with a placement ID.
-        interstitialAd = new InterstitialAd(InterstitialFragment.this.getActivity(), "W93593Xw");
+        interstitialAd = new InterstitialAd(InterstitialFragment.this.getActivity(), getString(R.string.interstitialAdPlacement));
 
         // Set a listener to get notified on changes or when the user interact with the ad.
         interstitialAd.setAdListener(InterstitialFragment.this);
