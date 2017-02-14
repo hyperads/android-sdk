@@ -15,12 +15,16 @@ import com.hyperadx.hypernetwork.ads.Ad;
 import com.hyperadx.hypernetwork.ads.AdError;
 import com.hyperadx.hypernetwork.ads.InterstitialAd;
 import com.hyperadx.hypernetwork.ads.InterstitialAdListener;
+import com.hyperadx.hypernetwork.ads.VideoInterstitialAd;
 
 public class InterstitialFragment extends Fragment implements InterstitialAdListener {
 
     private TextView interstitialAdStatusLabel;
     private Button loadInterstitialButton;
     private Button showInterstitialButton;
+    private Button loadInterstitialVideoButton;
+    private Button showInterstitialVideoButton;
+    private VideoInterstitialAd videoInterstitialAd;
 
     private InterstitialAd interstitialAd;
 
@@ -40,6 +44,9 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
 
         loadInterstitialButton = (Button) view.findViewById(R.id.loadInterstitialButton);
         showInterstitialButton = (Button) view.findViewById(R.id.showInterstitialButton);
+        loadInterstitialVideoButton = (Button) view.findViewById(R.id.loadInterstitialVideoButton);
+        showInterstitialVideoButton = (Button) view.findViewById(R.id.showInterstitialVideoButton);
+
 
 
         loadInterstitialButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +63,20 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
             }
 
 
+        });
+
+        loadInterstitialVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadInterstitialVideo();
+            }
+        });
+
+        showInterstitialVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showInterstitialVideo();
+            }
         });
 
 
@@ -90,6 +111,62 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
         // Load a new interstitial.
         interstitialAd.loadAd();
 
+    }
+
+
+    private void loadInterstitialVideo() {
+        if (videoInterstitialAd != null) {
+            videoInterstitialAd.destroy();
+            videoInterstitialAd = null;
+        }
+        setLabel("Loading video interstitial ad...");
+
+        videoInterstitialAd = new VideoInterstitialAd(InterstitialFragment.this.getActivity(), getString(R.string.interstitialVideoAdPlacement));
+
+        videoInterstitialAd.setAdListener(new InterstitialAdListener() {
+            @Override
+            public void onInterstitialDisplayed(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Interstitial Video Displayed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onInterstitialDismissed(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Interstitial Video Dismissed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(Ad ad, AdError adError) {
+                if (ad == videoInterstitialAd)
+                    setLabel("Interstitial video ad failed to load: " + adError.getErrorMessage());
+
+            }
+
+            @Override
+            public void onAdLoaded(Ad ad) {
+                if (ad == videoInterstitialAd)
+                    setLabel("Video Ad loaded. Click show to present!");
+
+            }
+
+            @Override
+            public void onAdClicked(Ad ad) {
+                if (ad == videoInterstitialAd)
+                    Toast.makeText(InterstitialFragment.this.getActivity(), "Interstitial Video Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        videoInterstitialAd.loadAd();
+    }
+
+    private void showInterstitialVideo() {
+        if (videoInterstitialAd == null || !videoInterstitialAd.isAdLoaded()) {
+            // Ad not ready to show.
+            setLabel("Video Ad not loaded. Click load to request an video ad.");
+        } else {
+            // Ad was loaded, show it!
+            videoInterstitialAd.show();
+            setLabel("");
+        }
     }
 
     @Override

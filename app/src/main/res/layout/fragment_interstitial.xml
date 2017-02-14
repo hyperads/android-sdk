@@ -39,4 +39,31 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/interstitialVideoAdControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/interstitialAdControls"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/loadInterstitialVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Interstitial Video"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/showInterstitialVideoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="show Video Ad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
 </RelativeLayout>
