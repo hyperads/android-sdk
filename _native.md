@@ -2,8 +2,12 @@
 
 The HyperADX's Native Ads allows you to build a customized experience for the ads displayed in your app. When using the Native Ad API, instead of receiving an ad ready to be displayed, you will receive a group of ad properties such as a title, an image, a call to action. These properties are used to construct a custom UIView, which displays the ad.
 
-### Set up the SDK
+You can implement the [Native Ads Manager](https://github.com/spbelenaa/android-sdk/blob/2.x/_native.md#native-ads-manager) to displaying multiple ads within a short amount of time, or to automatically refresh and deliver ads in an application.
 
+
+### Impementing Native Ads
+
+Please start from importing the SDK. 
 Sample project:
 
 * [Download](https://github.com/hyperads/android-sdk/releases) the latest release and extract the Example app for Android.
@@ -30,7 +34,7 @@ Then please take the steps below:
             android:exported="false" />
 ```
 
-* Put the hypernetwork-release.aar in “libs” folder in your Android Studio. Add it to dependencies in build.grandle file. Also you need to add flatDir support and google play services:
+* Put the hypernetwork-release.aar in “libs” folder in your Android Studio. Add it to dependencies in build.grandle file. You also need to add flatDir support and Google Play services:
 
 ```groove
 allprojects {
