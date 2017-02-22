@@ -135,6 +135,11 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
             }
 
             @Override
+            public void onVideoCompleted(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Interstitial Video Completed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
             public void onError(Ad ad, AdError adError) {
                 if (ad == videoInterstitialAd)
                     setLabel("Interstitial video ad failed to load: " + adError.getErrorMessage());
@@ -204,6 +209,11 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
         // Cleanup.
         interstitialAd.destroy();
         interstitialAd = null;
+    }
+
+    @Override
+    public void onVideoCompleted(Ad ad) {
+
     }
 
     @Override
