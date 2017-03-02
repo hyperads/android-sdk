@@ -48,7 +48,6 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
         showInterstitialVideoButton = (Button) view.findViewById(R.id.showInterstitialVideoButton);
 
 
-
         loadInterstitialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

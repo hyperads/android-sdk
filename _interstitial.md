@@ -92,6 +92,8 @@ dependencies {
             }
 
 
+// Methods that overrided by implementation of InterstitialAdListener
+
        @Override
        public void onDestroy() {
            if (interstitialAd != null) {
@@ -132,6 +134,11 @@ dependencies {
        @Override
        public void onAdClicked(Ad ad) {
            Toast.makeText(this.getActivity(), "Interstitial Clicked", Toast.LENGTH_SHORT).show();
+       }
+
+       @Override
+       public void onVideoCompleted(Ad ad) {
+
        }
 
 ```
