@@ -13,8 +13,11 @@ import android.widget.Toast;
 import com.hyperadx.had_sdk_v2.R;
 import com.hyperadx.hypernetwork.ads.Ad;
 import com.hyperadx.hypernetwork.ads.AdError;
+import com.hyperadx.hypernetwork.ads.HADReward;
 import com.hyperadx.hypernetwork.ads.InterstitialAd;
 import com.hyperadx.hypernetwork.ads.InterstitialAdListener;
+import com.hyperadx.hypernetwork.ads.RewardedInterstitialAdListener;
+import com.hyperadx.hypernetwork.ads.RewardedVideoInterstitialAd;
 import com.hyperadx.hypernetwork.ads.VideoInterstitialAd;
 
 public class InterstitialFragment extends Fragment implements InterstitialAdListener {
@@ -24,7 +27,10 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
     private Button showInterstitialButton;
     private Button loadInterstitialVideoButton;
     private Button showInterstitialVideoButton;
+    private Button loadRewardedVideoButton;
+    private Button showRewardedVideoButton;
     private VideoInterstitialAd videoInterstitialAd;
+    private RewardedVideoInterstitialAd rewardedVideoInterstitialAd;
 
     private InterstitialAd interstitialAd;
 
@@ -44,9 +50,12 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
 
         loadInterstitialButton = (Button) view.findViewById(R.id.loadInterstitialButton);
         showInterstitialButton = (Button) view.findViewById(R.id.showInterstitialButton);
+
         loadInterstitialVideoButton = (Button) view.findViewById(R.id.loadInterstitialVideoButton);
         showInterstitialVideoButton = (Button) view.findViewById(R.id.showInterstitialVideoButton);
 
+        loadRewardedVideoButton = (Button) view.findViewById(R.id.loadRewardedVideoButton);
+        showRewardedVideoButton = (Button) view.findViewById(R.id.showRewardedVideoButton);
 
         loadInterstitialButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,10 +87,93 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
             }
         });
 
+        loadRewardedVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadRewardedVideo();
+            }
+        });
+
+        showRewardedVideoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRewardedVideo();
+            }
+        });
 
         return view;
     }
 
+    private void loadRewardedVideo() {
+        if (rewardedVideoInterstitialAd != null) {
+            rewardedVideoInterstitialAd.destroy();
+            rewardedVideoInterstitialAd = null;
+        }
+        setLabel("Loading rewarded video ad...");
+
+        rewardedVideoInterstitialAd = new RewardedVideoInterstitialAd(InterstitialFragment.this.getActivity(), getString(R.string.interstitialRewardedVideoAdPlacement), "customerid" /*pass null if you not use S2S*/);
+
+        rewardedVideoInterstitialAd.setAdListener(new RewardedInterstitialAdListener() {
+            @Override
+            public void onRewardedVideoCompleted(Ad ad, HADReward reward) {
+                // Called when a rewarded video is completed and the user should be rewarded.
+                // You can query the reward object with String getLabel(), and int getAmount().
+
+                Toast.makeText(InterstitialFragment.this.getActivity(), String.format("Rewarded Video Completed. Now you may gift %d %s to user!", reward.getAmount(), reward.getLabel()), Toast.LENGTH_LONG).show();
+
+
+            }
+
+            @Override
+            public void onVideoCompleted(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Rewarded Video Completed. Now you may gift some profit to user!", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onInterstitialDisplayed(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Rewarded Video Displayed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onInterstitialDismissed(Ad ad) {
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Rewarded Video Dismissed", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onError(Ad ad, AdError adError) {
+                if (ad == rewardedVideoInterstitialAd)
+                    setLabel("Rewarded Video ad failed to load: " + adError.getErrorMessage());
+
+            }
+
+            @Override
+            public void onAdLoaded(Ad ad) {
+                if (ad == rewardedVideoInterstitialAd)
+                    setLabel("Rewarded Video Ad loaded. Click show to present!");
+
+            }
+
+            @Override
+            public void onAdClicked(Ad ad) {
+                if (ad == rewardedVideoInterstitialAd)
+                    Toast.makeText(InterstitialFragment.this.getActivity(), "Interstitial Video Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        rewardedVideoInterstitialAd.loadAd();
+    }
+
+    private void showRewardedVideo() {
+        if (rewardedVideoInterstitialAd == null || !rewardedVideoInterstitialAd.isAdLoaded()) {
+            // Ad not ready to show.
+            setLabel("Rewarded Video Ad not loaded. Click load to request an video ad.");
+        } else {
+            // Ad was loaded, show it!
+            rewardedVideoInterstitialAd.show();
+            setLabel("");
+        }
+    }
 
     private void showInterstitial() {
         if (interstitialAd == null || !interstitialAd.isAdLoaded()) {
