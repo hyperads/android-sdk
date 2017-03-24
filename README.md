@@ -33,6 +33,12 @@ bids for them.
 
 * [Examples & target types](_tools.md)
 
+### User segmentation [alpha]
+
+Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests and spending habits. You can build custom (or use predefined) segments from your users. This is potentially increase your monetization. 
+
+* [Examples & target types](_events.md)
+
 ###  Adapters for integration with popular Networks
 
 HyperADX provides MoPub and AdMob adapters for Android applications. Publishers using MoPub and AdMob to mediate ad networks for their Android apps can now take advantage of serving Hypeadx's native (MoPub only) and interstitial ads through MoPub's and AdMob's mediation solutions.
