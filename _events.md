@@ -11,12 +11,14 @@ For example:
 ```java
 
  HADEvent hadEvent = new HADEvent(this);
-        hadEvent.setToken("TOKEN");
-        hadEvent.sendEvent(Event.ECOMMERCE_PURSHASE);
-        
-        // Or just
-        
-        HADEvent.sendEvent(this, "TOKEN", Event.GAMING_ACHIEVEMENT_UNLOCKED); //That's all!
+ hadEvent.setToken("TOKEN");
+ hadEvent.sendEvent(Event.ECOMMERCE_PURSHASE);
+ 
+ // Or just
+ 
+ HADEvent.sendEvent(this, "TOKEN", Event.GAMING_ACHIEVEMENT_UNLOCKED); 
+ 
+ //That's all!
 
 ```
 
