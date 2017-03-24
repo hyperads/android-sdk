@@ -45,5 +45,5 @@ HyperADX provides MoPub and AdMob adapters for Android applications. Publishers 
 
 The sections below will let you know how to add the network adapter.
 
-* [MoPub](https://github.com/hyperads/android-MoPub-adapter)
-* [AdMob](https://github.com/hyperads/android-AdMob-adapter)
+* [MoPub](https://github.com/hyperads/android-MoPub-adapter/tree/2.x)
+* [AdMob](https://github.com/hyperads/android-AdMob-adapter/tree/2.x)
