@@ -37,7 +37,7 @@ bids for them.
 
 Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests and spending habits. You can build custom (or use predefined) segments from your users. This is potentially increase your monetization. 
 
-* [Examples & target types](_events.md)
+* [Examples](_events.md)
 
 ###  Adapters for integration with popular Networks
 
