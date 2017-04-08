@@ -25,6 +25,10 @@ Then please take the steps below:
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+ <activity
+            android:name="com.hyperadx.hypernetwork.ads.internal.interstitial.HadNetworkActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+ 
  <service
             android:name="com.hyperadx.hypernetwork.ads.internal.vast.network.asynctask.VASTAsyncTask$Async"
             android:exported="false" />
