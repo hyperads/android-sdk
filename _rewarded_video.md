@@ -1,4 +1,4 @@
-# Video Interstitial ads
+# Rewarded Video ads
 
 Here is the sample how to monetize your Android apps with the rewarded video ads. See [Supported Ad types](https://github.com/hyperads/android-sdk#supported-ad-types) for information about other supported ad formats.
 
