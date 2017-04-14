@@ -118,16 +118,12 @@ public class InterstitialFragment extends Fragment implements InterstitialAdList
             public void onRewardedVideoCompleted(Ad ad, HADReward reward) {
                 // Called when a rewarded video is completed and the user should be rewarded.
                 // You can query the reward object with String getLabel(), and int getAmount().
-
                 Toast.makeText(InterstitialFragment.this.getActivity(), String.format("Rewarded Video Completed. Now you may gift %d %s to user!", reward.getAmount(), reward.getLabel()), Toast.LENGTH_LONG).show();
-
-
             }
 
             @Override
             public void onVideoCompleted(Ad ad) {
-                Toast.makeText(InterstitialFragment.this.getActivity(), "Rewarded Video Completed. Now you may gift some profit to user!", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(InterstitialFragment.this.getActivity(), "Rewarded Video Completed.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
