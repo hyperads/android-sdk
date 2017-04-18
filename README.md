@@ -30,13 +30,13 @@ These are code samples of the different ad formats available with [HyperADX's] A
 
 Ad users are different in their behaviors, needs and expectations. Applying user segmentation delivers the best-fitting ad experience to your users.
 Custom ad targeting results in increasing your monetization values and obtaining maximum value from every user. Besides our advertisers and media buying department encourage the most engaged users by making higher
-bids for them.
+bids for them. Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests and spending habits. You can build custom (or use predefined) segments from your users. This is potentially increase your monetization.
 
 * [Examples & target types](_tools.md)
 
 ### User segmentation [alpha]
 
-Customer segmentation is the practice of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests and spending habits. You can build custom (or use predefined) segments from your users. This is potentially increase your monetization. 
+Understanding how the users interact with your app directly impacts your ability to build effective advertising campaigns. By defining and measuring a number of in-app events you can more efficiently optimize both the functionality of your app and your advertising strategies. In-app events allow you to track users' actions, taps, purchases, shares and more in real time. As a result, these data can be used to create defined audience segments based upon users that have similar activity profiles. This is potentially increase app monetization.
 
 * [Examples](_events.md)
 
